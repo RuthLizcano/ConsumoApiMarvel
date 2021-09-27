@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "apiConection",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
