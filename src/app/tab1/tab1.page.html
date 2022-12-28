@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Personajes de Marvel
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div *ngFor="let item of newsList">
+    <ion-card >
+      <img 
+      [src]="item.thumbnail.path+'.'+item.thumbnail.extension" 
+      alt=""
+      />
+      <ion-card-header>
+        <ion-card-header id="titulo">{{item.name}}</ion-card-header>
+        
+      </ion-card-header>
+      <ion-card-content>{{item.description}}
+      </ion-card-content>
+      
+  
+  
+    </ion-card>
+  </div>
+  
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
